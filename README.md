@@ -1,13 +1,12 @@
 # Geospatial User Feedback schema plugin
 
-This is the Geospatial User Feedback (GUF) schema plugin for GeoNetwork 3.1.x or greater version.
+This is the Geospatial User Feedback (GUF) schema plugin for GeoNetwork 3.2.x or greater version.
 
 ## Reference documents:
 
 * http://schemas.opengis.net/guf/1.0
  
-
-## Description:
+## Description:
 
 Schema can be used to describe structure of user feedback items on catalogue items.
 
@@ -23,21 +22,21 @@ This plugin is composed of:
 * multilingual metadata support
 * validation (XSD and Schematron)
 
-## Metadata rules:
+## Metadata rules:
 
 ### Metadata identifier
 
-The metadata identifier is stored in the element mdb:MD_Metadata/mdb:metadataIdentifier.
+The metadata identifier is stored in the element `guf:GUF_FeedbackItem/guf:itemIdentifier`.
 Only the code is set by default but more complete description may be defined (see authority,
 codeSpace, version, description).
 
 ```
 <guf:itemIdentifier>
-<mcc:MD_Identifier>
-<mcc:code>
-<gco:CharacterString>GCL2000_feedack_item_1</gco:CharacterString>
-</mcc:code>
-</mcc:MD_Identifier>
+  <mcc:MD_Identifier>
+    <mcc:code>
+      <gco:CharacterString>GCL2000_feedack_item_1</gco:CharacterString>
+    </mcc:code>
+  </mcc:MD_Identifier>
 </guf:itemIdentifier>
 ```
 
@@ -48,21 +47,21 @@ The target metadata record is referenced using the following form from the edito
 
 ```
 <guf:GUF_FeedbackTarget>
-<guf:resourceRef xlink:href="http://www-gvm.jrc.it/glc2000">
-<cit:CI_Citation>
-<cit:title/>
-<cit:identifier>
-<mcc:MD_Identifier>
-<mcc:code>
-<gco:CharacterString>GLC2000</gco:CharacterString>
-</mcc:code>
-<mcc:codeSpace>
-<gco:CharacterString>jrc.ec.europa.eu</gco:CharacterString>
-</mcc:codeSpace>
-</mcc:MD_Identifier>
-</cit:identifier>
-</cit:CI_Citation>
-</resourceRef>
+  <guf:resourceRef xlink:href="http://www-gvm.jrc.it/glc2000">
+    <cit:CI_Citation>
+      <cit:title/>
+      <cit:identifier>
+        <mcc:MD_Identifier>
+          <mcc:code>
+            <gco:CharacterString>GLC2000</gco:CharacterString>
+          </mcc:code>
+          <mcc:codeSpace>
+            <gco:CharacterString>jrc.ec.europa.eu</gco:CharacterString>
+          </mcc:codeSpace>
+        </mcc:MD_Identifier>
+      </cit:identifier>
+    </cit:CI_Citation>
+  </guf:resourceRef>
 </guf:GUF_FeedbackTarget>
 ```
 
@@ -76,19 +75,18 @@ Nevertheless, the citation code is also indexed.
 
 ## CSW requests:
 
-If requesting using output schema http://www.isotc211.org/2005/gmd an ISO19139 record is returned. 
-To retrieve the record in ISO19115-3, use http://standards.iso.org/iso/19115/-3/mdb/1.0 output schema.
+To retrieve the record in GUF10, use http://www.opengis.net/guf/1.0/core output schema.
 ```
 <?xml version="1.0"?>
 <csw:GetRecordById xmlns:csw="http://www.opengis.net/cat/csw/2.0.2"
   service="CSW"
   version="2.0.2"
-  outputSchema="http://standards.iso.org/iso/19115/-3/mdb/1.0">
+  outputSchema="http://www.opengis.net/guf/1.0/core">
     <csw:Id>cecd1ebf-719e-4b1f-b6a7-86c17ed02c62</csw:Id>
     <csw:ElementSetName>brief</csw:ElementSetName>
 </csw:GetRecordById>
 ```
-Note: outputSchema = own will also return the record in ISO19115-3.
+Note: outputSchema = own will also return the record in GUF10.
 
 
 
@@ -97,29 +95,28 @@ Note: outputSchema = own will also return the record in ISO19115-3.
 
 ### GeoNetwork version to use with this plugin
 
-This is an implementation of the latest XSD published by ISO-TC211. 
 It'll not be supported in 2.10.x series so don't plug it into it!
-Use GeoNetwork 3.0.3+ version.
+Use GeoNetwork 3.2.x+ version.
 
 ### Adding the plugin to the source code
 
-The best approach is to add the plugin as a submodule into GeoNetwork schema module.
+The best approach is to add the plugin as a submodule into GeoNetwork schema module. Note that this schema depends on iso19115-3.
 
 ```
 cd schemas
 git submodule add https://github.com/metadata101/iso19115-3.git iso19115-3
+git submodule add https://github.com/metadata101/guf10.git guf10
 ```
 
-Add the new module to the schema/pom.xml:
+Add the new modules to the `schema/pom.xml`:
 
 ```
-  
   <module>iso19115-3</module>
   <module>guf</module>
 </modules>
 ```
 
-Add the dependency in the web module in web/pom.xml:
+Add the dependencies in the web module in `web/pom.xml`:
 
 ```
 <dependency>
@@ -137,6 +134,10 @@ Add the module to the webapp in web/pom.xml:
   <phase>process-resources</phase>
   ...
   <resource>
+    <directory>${project.basedir}/../schemas/ISO19115-3/src/main/plugin</directory>
+    <targetPath>${basedir}/src/main/webapp/WEB-INF/data/config/schema_plugins</targetPath>
+  </resource>
+  <resource>
     <directory>${project.basedir}/../schemas/GUF10/src/main/plugin</directory>
     <targetPath>${basedir}/src/main/webapp/WEB-INF/data/config/schema_plugins</targetPath>
   </resource>
@@ -153,7 +154,7 @@ Then in admin > Settings, add to metadata/editor/schemaConfig the editor configu
 for the schema:
 
 ```
-"iso19115-3":{
+"guf10":{
   "defaultTab":"default",
   "displayToolTip":false,
   "related":{
@@ -166,9 +167,6 @@ for the schema:
 
 ### Adding the conversion to the import record page
 
-In https://github.com/geonetwork/core-geonetwork/tree/3.2.x/web/src/main/webapp/xsl/conversion/import, add the 19139 to 19115-3 conversion file https://github.com/metadata101/iso19115-3/blob/3.2.x/ISO19139-to-ISO19115-3.xsl.
-
-
 
 ## More work required
 
@@ -176,8 +174,6 @@ In https://github.com/geonetwork/core-geonetwork/tree/3.2.x/web/src/main/webapp/
 
 
 ### GML support
-
-Polygon or line editing and view.
 
 
 ## Community
