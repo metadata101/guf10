@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<GUF_FeedbackItem
+        xmlns="http://www.opengis.net/guf/1.0/core"
+        xmlns:cit="http://standards.iso.org/iso/19115/-3/cit/1.0"
+        xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0"
+        xmlns:gex="http://standards.iso.org/iso/19115/-3/gex/1.0"
+        xmlns:lan="http://standards.iso.org/iso/19115/-3/lan/1.0"
+        xmlns:mcc="http://standards.iso.org/iso/19115/-3/mcc/1.0"
+        xmlns:mdq="http://standards.iso.org/iso/19157/-2/mdq/1.0"
+        xmlns:mri="http://standards.iso.org/iso/19115/-3/mri/1.0"
+        xmlns:mrl="http://standards.iso.org/iso/19115/-3/mrl/1.0"
+        xmlns:mdb="http://standards.iso.org/iso/19115/-3/mdb/1.0"
+        xmlns:dqc="http://standards.iso.org/iso/19157/-2/dqc/1.0"
+        xmlns:qcm="http://www.opengis.net/guf/1.0/common"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:xlink="http://www.w3.org/1999/xlink">
+    <itemIdentifier>
+        <mcc:MD_Identifier>
+            <mcc:code>
+                <gco:CharacterString>GCL2000_feedack_item_1</gco:CharacterString>
+            </mcc:code>
+        </mcc:MD_Identifier>
+    </itemIdentifier>
+    <abstract gco:nilReason="missing">
+        <gco:CharacterString></gco:CharacterString>
+    </abstract>
+    <contactRole>
+        <GUF_UserRoleCode codeListValue="researchEndUser" codeList=""
+            >researchEndUser</GUF_UserRoleCode>
+    </contactRole>
+    <dateInfo>
+        <cit:CI_Date>
+            <cit:date>
+                <gco:DateTime>2006-03-01T00:00:00Z</gco:DateTime>
+            </cit:date>
+            <cit:dateType>
+                <cit:CI_DateTypeCode
+                    codeList="http://wis.wmo.int/2008/catalogues/draft_version_1-
+                    1/WMO_Codelists_ver1_1.xml#CI_DateTypeCode"
+                    codeListValue="creation"/>
+            </cit:dateType>
+        </cit:CI_Date>
+    </dateInfo>
+    <citation>
+        <cit:CI_Citation>
+            <cit:title>
+                <gco:CharacterString>User Feedback Template</gco:CharacterString>
+            </cit:title>
+            <cit:date>
+                <cit:CI_Date>
+                    <cit:date>
+                        <gco:DateTime>2006-03-01T00:00:00Z</gco:DateTime>
+                    </cit:date>
+                    <cit:dateType>
+                        <cit:CI_DateTypeCode
+                            codeList="http://wis.wmo.int/2008/catalogues/draft_version_1- 1/WMO_Codelists_ver1_1.xml#CI_DateTypeCode"
+                            codeListValue="creation"/>
+                    </cit:dateType>
+                </cit:CI_Date>
+            </cit:date>
+            <cit:series>
+                <cit:CI_Series>
+                    <cit:name gco:nilReason="missing">
+                        <gco:CharacterString></gco:CharacterString>
+                    </cit:name>
+                </cit:CI_Series>
+            </cit:series>
+            <cit:otherCitationDetails gco:nilReason="missing">
+                <gco:CharacterString></gco:CharacterString>
+            </cit:otherCitationDetails>
+        </cit:CI_Citation>
+    </citation>
+    <contact>
+        <GUF_UserInformation>
+            <userDetails>
+                <cit:CI_Responsibility>
+                    <cit:role>
+                        <cit:CI_RoleCode
+                            codeList="http://wis.wmo.int/2008/catalogues/draft_version_1- 1/WMO_Codelists_ver1_1.xml#CI_RoleCode"
+                            codeListValue="user"/>
+                    </cit:role>
+                    <cit:party>
+                        <cit:CI_Individual>
+                            <cit:name>
+                                <gco:CharacterString></gco:CharacterString>
+                            </cit:name>
+                        </cit:CI_Individual>
+                    </cit:party>
+                </cit:CI_Responsibility>
+            </userDetails>
+            <expertiseLevel>
+                <GUF_RatingCode codeListValue="5"
+                    codeList="http://www.opengis.net/guf/1.0/resources/codeList.xml#GUF_Rat ingCode"
+                />
+            </expertiseLevel>
+        </GUF_UserInformation>
+    </contact>
+    <descriptiveKeywords>
+        <mri:MD_Keywords>
+            <mri:keyword></mri:keyword>
+            <mri:thesaurusName>
+            </mri:thesaurusName>
+        </mri:MD_Keywords>
+    </descriptiveKeywords>
+    <userComment>
+        <GUF_UserComment>
+            <comment gco:nilReason="missing">
+                <gco:CharacterString></gco:CharacterString>
+            </comment>
+        </GUF_UserComment>
+    </userComment>
+    <target>
+        <GUF_FeedbackTarget>
+            <resourceRef xlink:href="http://www-gvm.jrc.it/glc2000">
+                <cit:CI_Citation>
+                    <cit:title/>
+                    <cit:identifier>
+                        <mcc:MD_Identifier>
+                            <mcc:code>
+                                <gco:CharacterString></gco:CharacterString>
+                            </mcc:code>
+                            <mcc:codeSpace>
+                                <gco:CharacterString></gco:CharacterString>
+                            </mcc:codeSpace>
+                        </mcc:MD_Identifier>
+                    </cit:identifier>
+                </cit:CI_Citation>
+            </resourceRef>
+            <scope>
+                <mcc:MD_Scope>
+                    <mcc:level>
+                        <mcc:MD_ScopeCode codeListValue="dataset"
+                            codeList="http://standards.iso.org/iso/19115/resources/Codelist/cat/codeLists.xml#MD_ScopeCode"
+                        />
+                    </mcc:level>
+                </mcc:MD_Scope>
+            </scope>
+            <role>
+                <GUF_TargetRoleCode codeListValue="primary"
+                    codeList="http://www.opengis.net/guf/1.0/resources/codeList.xml#GUF_TargetRoleCode"
+                />
+            </role>
+        </GUF_FeedbackTarget>
+    </target>
+
+    <rating>
+
+    </rating>
+</GUF_FeedbackItem>

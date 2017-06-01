@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://geonetwork-opensource.org/schemas/schema-ident"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://geonetwork-opensource.org/schemas/schema-ident http://geonetwork-opensource.org/schemas/schema-ident/schema-ident.xsd">
+  <name>GUF10</name>
+  <id>d2270eaa-b531-4c0d-a814-d2164d794217</id>
+  <version>1.0</version>
+  <title xml:lang="en">Geospatial User Feedback &#45;&#45; Metadata</title>
+  <description xml:lang="en"><![CDATA[
+
+This schema also includes:
+
+- ISO19115-3 for dataset/service metadata
+
+- ISO19110 for feature catalog
+
+- ISO19115-2 for Imagery
+
+- ISO19157 for Data Quality
+  ]]></description>
+ 
+  <standardUrl xml:lang="en">http://www.iso.org/iso/h</standardUrl>
+
+  <!-- FIXME: add all required schemas -->
+  <schemaLocation>http://schemas.opengis.net/guf/1.0 http://schemas.opengis.net/guf/1.0/guf.xsd</schemaLocation>
+  <autodetect xmlns:guf="http://schemas.opengis.net/guf/1.0"
+              xmlns:cit="http://standards.iso.org/iso/19115/-3/cit/1.0"
+              xmlns:mcc="http://standards.iso.org/iso/19115/-3/mcc/1.0"
+              xmlns:mco="http://standards.iso.org/iso/19115/-3/mco/1.0"
+              xmlns:mdb="http://standards.iso.org/iso/19115/-3/mdb/1.0"
+              xmlns:mrd="http://standards.iso.org/iso/19115/-3/mrd/1.0"
+              xmlns:mdq="http://standards.iso.org/iso/19157/-2/mdq/1.0"
+              xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0">
+    <!-- ISO19115-3 identification is based on the
+    root element of the record. It could be a MD_Metadata
+    element (for a metadata recocrd) or some other eleement
+    when used as a subtemplate (cf. directory support).
+    -->
+    <elements type="root">
+      <guf:GUF_FeedbackItem/>
+      <guf:itemIdentifier/>
+      <guf:citation/>
+    </elements>
+  </autodetect>
+  <!--
+  Filters defined which elements should be removed
+  depending on user privileges.
+  -->
+  <!--<filters/>-->
+</schema>

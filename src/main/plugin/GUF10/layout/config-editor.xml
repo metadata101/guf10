@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<editor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../config-editor.xsd"
+  xmlns:gn="http://www.fao.org/geonetwork"
+  xmlns:gml="http://www.opengis.net/gml/3.2"
+  xmlns:srv="http://standards.iso.org/iso/19115/-3/srv/2.0"
+  xmlns:mdb="http://standards.iso.org/iso/19115/-3/mdb/1.0"
+  xmlns:mcc="http://standards.iso.org/iso/19115/-3/mcc/1.0"
+  xmlns:mri="http://standards.iso.org/iso/19115/-3/mri/1.0"
+  xmlns:mmi="http://standards.iso.org/iso/19115/-3/mmi/1.0"
+  xmlns:mrs="http://standards.iso.org/iso/19115/-3/mrs/1.0"
+  xmlns:mrd="http://standards.iso.org/iso/19115/-3/mrd/1.0"
+  xmlns:mco="http://standards.iso.org/iso/19115/-3/mco/1.0"
+  xmlns:msr="http://standards.iso.org/iso/19115/-3/msr/1.0"
+  xmlns:lan="http://standards.iso.org/iso/19115/-3/lan/1.0"
+  xmlns:mrl="http://standards.iso.org/iso/19115/-3/mrl/1.0"
+  xmlns:gex="http://standards.iso.org/iso/19115/-3/gex/1.0"
+  xmlns:mdq="http://standards.iso.org/iso/19157/-2/mdq/1.0"
+  xmlns:cit="http://standards.iso.org/iso/19115/-3/cit/1.0"
+  xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0"
+  xmlns:gmx="http://standards.iso.org/iso/19115/-3/gmx"
+  xmlns:guf="http://www.opengis.net/guf/1.0/core">
+
+  <!-- Form field type configuration. Default is text. -->
+  <fields>
+    <for name="guf:comment" use="textarea" />
+    <for name="guf:abstract" use="textarea"/>
+
+    <for name="cit:issueIdentification" use="textarea"/>
+    <for name="cit:description" use="textarea"/>
+    <for name="mcc:fileDescription" use="textarea"/>
+    <for name="gex:description" use="textarea"/>
+    <for name="mrc:description" use="textarea"/>
+    <for name="mrd:mediumNote" use="textarea"/>
+    <for name="lan:description" use="textarea"/>
+    <for name="mcc:description" use="textarea"/>
+    <for name="msr:transformationDimensionMapping" use="textarea"/>
+    <for name="msr:dimensionDescription" use="textarea"/>
+    <for name="msr:orientationParameterDescription" use="textarea"/>
+    <for name="cit:contactInstructions" use="textarea"/>
+    <for name="mco:userNote" use="textarea"/>
+    <for name="mco:handlingDescription" use="textarea"/>
+    <for name="mrl:description" use="textarea"/>
+    <for name="gmd:checkPointDescription" use="textarea"/>
+    <for name="mri:credit" use="textarea"/>
+    <for name="mrd:description" use="textarea"/>
+    <for name="gmd:evaluationMethodDescription" use="textarea"/>
+    <for name="gmd:explanation" use="textarea"/>
+    <for name="gmd:handlingDescription" use="textarea"/>
+    <for name="mdq:measureDescription" use="textarea"/>
+    <for name="gmd:purpose" use="textarea"/>
+    <for name="gmd:orderingInstructions" use="textarea"/>
+    <for name="mco:otherConstraints" use="textarea"/>
+    <for name="mri:statement" use="textarea"/>
+    <for name="mri:supplementalInformation" use="textarea"/>
+    <for name="gmd:specificUsage" use="textarea"/>
+    <for name="gmd:userNote" use="textarea"/>
+    <for name="mco:useLimitation" use="textarea"/>
+    <for name="cit:otherCitationDetails" use="textarea"/>
+    <for name="mmi:maintenanceNote" use="textarea"/>
+    <for name="mco:statement" use="textarea"/>
+    <for name="gfc:definition" use="textarea"/>
+    <for name="mri:environmentDescription" use="textarea"/>
+    <for name="mdq:standaloneQualityReportDetails" use="textarea"/>
+    <for name="mdq:abstract" use="textarea"/>
+    <for name="mdq:statement" use="textarea"/>
+    <for name="mdq:evaluationMethodDescription" use="textarea"/>
+    <for name="mrl:statement" use="textarea"/>
+    <for name="mri:response" use="textarea"/>
+    <for name="mri:specificUsage" use="textarea"/>
+    <for name="mrd:orderOptions" use="textarea"/>
+
+
+    <for name="gco:Distance" use="number"/>
+    <for name="gco:Decimal" use="number"/>
+    <for name="gco:Integer" use="number"/>
+    <for name="gco:Real" use="number"/>
+    <for name="gco:Angle" use="number"/>
+    <for name="gco:Boolean" use="checkbox"/>
+
+
+    <for name="gco:Date" use="data-gn-date-picker"/>
+    <for name="gco:DateTime" use="data-gn-date-picker"/>
+
+
+
+    <!-- gmx:FileName/@src attribute -->
+    <for name="src" use="data-gn-logo-selector"/>
+
+    <for name="cit:electronicMailAddress" use="email"/>
+
+    <for name="lan:language" use="data-gn-language-picker"/>
+    <for name="lan:languageCode" use="data-gn-language-picker"/>
+
+    <for name="lan:country" use="data-gn-country-picker"/>
+    <for name="cit:country" use="data-gn-country-picker"/>
+
+    <for name="mrs:referenceSystemIdentifier" addDirective="data-gn-crs-selector"/>
+
+    <for name="mdb:contact" addDirective="data-gn-directory-entry-selector">
+      <directiveAttributes
+              data-template-add-action="true"
+              data-search-action="false"
+              data-popup-action="true"
+              data-template-type="contact"
+              data-filter='{"_root": "cit:CI_Responsibility"}'
+              data-variables="cit:role/cit:CI_RoleCode/@codeListValue~{role}"/>
+    </for>
+    <for name="mri:pointOfContact" addDirective="data-gn-directory-entry-selector">
+      <!--<directiveAttributes
+              data-template-add-action="true"
+              data-template-type="contact"
+              data-filter='{"_root": "cit:CI_Responsibility"}'
+              data-variables="cit:role/cit:CI_RoleCode/@codeListValue~{role}"/>-->
+      <!-- To use an ISO19139 contact directory in an ISO19115-3 record
+      use the following configuration: -->
+      <directiveAttributes
+              data-template-add-action="true"
+              data-search-action="false"
+              data-popup-action="true"
+              data-template-type="contact"
+              data-filter='{"_root": "gmd:CI_ResponsibleParty"}'
+              data-variables="gmd:role/gmd:CI_RoleCode/@codeListValue~{role}"
+              data-transformation="contact-from-iso19139-to-guf10"/>
+    </for>
+    <for name="mrd:distributor" addDirective="data-gn-directory-entry-selector">
+      <directiveAttributes
+              data-template-add-action="true"
+              data-search-action="false"
+              data-popup-action="true"
+              data-template-type="contact"
+              data-filter='{"_root": "cit:CI_Responsibility"}'
+              data-variables="cit:role/cit:CI_RoleCode/@codeListValue~{role}"/>
+    </for>
+    <for name="mrl:processor" addDirective="data-gn-directory-entry-selector">
+      <directiveAttributes
+              data-template-add-action="true"
+              data-search-action="false"
+              data-popup-action="true"
+              data-template-type="contact"
+              data-filter='{"_root": "cit:CI_Responsibility"}'
+              data-variables="cit:role/cit:CI_RoleCode/@codeListValue~{role}"/>
+    </for>
+    <for name="cit:citedResponsibleParty" addDirective="data-gn-directory-entry-selector">
+      <directiveAttributes
+              data-template-add-action="true"
+              data-search-action="false"
+              data-popup-action="true"
+              data-template-type="contact"
+              data-filter='{"_root": "cit:CI_Responsibility"}'
+              data-variables="cit:role/cit:CI_RoleCode/@codeListValue~{role}"/>
+    </for>
+
+
+    <for name="cit:logo" addDirective="data-gn-directory-entry-selector">
+      <directiveAttributes
+              data-template-add-action="true"
+              data-search-action="true"
+              data-popup-action="false"
+              data-template-type="logo"
+              data-filter='{"_root": "mcc:MD_BrowseGraphic"}'/>
+    </for>
+
+    <for name="mdq:report" addDirective="data-gn-directory-entry-selector">
+      <directiveAttributes
+              data-template-add-action="true"
+              data-search-action="true"
+              data-popup-action="false"
+              data-template-type="report"
+              data-filter='{"_root": "mdq:DQ_*"}'/>
+    </for>
+
+    <for name="mri:resourceConstraints" addDirective="data-gn-directory-entry-selector">
+      <directiveAttributes
+              data-template-add-action="true"
+              data-search-action="true"
+              data-popup-action="false"
+              data-template-type="resourceConstraints"
+              data-filter='{"_root": "mco:MD_*"}'/>
+    </for>
+
+    <for name="mri:descriptiveKeywords" addDirective="data-gn-thesaurus-selector">
+      <directiveAttributes
+              data-transformation="to-guf10-keyword"/>
+    </for>
+  </fields>
+
+
+  <fieldsWithFieldset>
+    <name>guf:GUF_FeedbackItem</name>
+    <name>guf:contact</name>
+    <name>guf:descriptiveKeywords</name>
+    <name>guf:target</name>
+    <name>guf:dateInfo</name>
+    <name>guf:additionalQuality</name>
+    <name>guf:rating</name>
+    <name>guf:significantEvent</name>
+
+    <name>mri:thesaurusName</name>
+    <name>cit:citedResponsibleParty</name>
+    <name>cit:party</name>
+    <name>cit:individual</name>
+    <name>cit:logo</name>
+  </fieldsWithFieldset>
+
+  <multilingualFields>
+    <!-- In multilingual mode, define which mode
+    the widget should have. If expanded, then one
+    field per language is displayed. -->
+    <expanded>
+      <name>cit:title</name>
+      <name>guf:abstract</name>
+    </expanded>
+    <!-- All fields in ISO could be multilingual.
+    Define element to exclude.
+    TODO: it may be relevant to have parent defined
+    to restrict the list.
+    -->
+    <exclude>
+      <name>cit:protocolRequest</name>
+      <name>gex:minimumValue</name>
+      <name>gex:maximumValue</name>
+      <name>mrc:minValue</name>
+      <name>mrc:maxValue</name>
+      <name>mrc:scaleFactor</name>
+      <name>mrc:offset</name>
+      <name>mrc:meanValue</name>
+      <name>mrc:standardDeviation</name>
+      <name>gco:Real</name>
+      <name>mrc:numberOfValues</name>
+      <name>mrc:bitsPerValue</name>
+      <name>mrc:triangulationIndicator</name>
+      <name>mrc:radiometricCalibrationDataAvailability</name>
+      <name>mrc:filmDistortionInformationAvailability</name>
+      <name>mrc:radiometricCalibrationDataAvailability</name>
+      <name>mrc:cameraCalibrationInformationAvailability</name>
+      <name>mrc:lensDistortionInformationAvailability</name>
+      <name>mrc:complianceCode</name>
+      <name>mrc:includedWithDataset</name>
+      <name>mrc:featureInstanceCount</name>
+      <name>gfc:uniqueInstance</name>
+      <name>mrd:density</name>
+      <name>mrd:densityUnits</name>
+      <name>mrd:volumes</name>
+      <name>mrd:unitsOfDistribution</name>
+      <name>mrd:transferSize</name>
+      <name>cit:linkage</name>
+      <name>cit:page</name>
+      <name>mco:useLimitation</name>
+      <name>mri:levelOfDetail</name>
+      <name>mri:distance</name>
+      <name>mri:vertical</name>
+      <name>mri:angularDistance</name>
+      <name>msr:controlPointAvailability</name>
+      <name>msr:orientationParameterAvailability</name>
+      <name>mac:averageAirTemperature</name>
+      <name>mac:maxRelativeHumidity</name>
+      <name>mac:maxAltitude</name>
+      <name>mac:meterologicalConditions</name>
+      <name>mas:schemaLanguage</name>
+      <name>mas:constraintLanguage</name>
+      <name>gex:extentTypeCode</name>
+      <name>mdq:pass</name>
+      <name>mri:denominator</name>
+      <name>mcc:code</name>
+      <name>gfc:typeName</name>
+      <name>gfc:code</name>
+      <name>gfc:valueType</name>
+      <name>gco:aName</name>
+      <name>gfc:isAbstract</name>
+      <name>mrc:illuminationElevationAngle</name>
+      <name>mrc:illuminationAzimuthAngle</name>
+      <name>mrc:cloudCoverPercentage</name>
+      <name>mrc:compressionGenerationQuantity</name>
+      <name>cit:electronicMailAddress</name>
+      <name>cit:postalCode</name>
+      <name>cit:city</name>
+      <name>cit:administrativeArea</name>
+      <name>cit:number</name>
+      <name>cit:hoursOfService</name>
+      <name>cit:date</name>
+      <name>mac:type</name>
+      <name>msr:geometricObjectCount</name>
+      <name>msr:numberOfDimensions</name>
+      <name>msr:checkPointAvailability</name>
+      <name>msr:dimensionSize</name>
+      <name>msr:resolution</name>
+      <name>msr:transformationParameterAvailability</name>
+      <name>mcc:fileName</name>
+      <name>mcc:fileType</name>
+      <name>mcc:version</name>
+      <name>cit:protocol</name>
+      <name>mrd:amendmentNumber</name>
+      <name>mrd:fileDecompressionTechnique</name>
+      <name>mcc:codeSpace</name>
+      <name>cit:edition</name>
+      <name>cit:ISBN</name>
+      <name>cit:ISSN</name>
+      <name>mex:condition</name>
+      <name>mex:maximumOccurence</name>
+      <name>mex:domainValue</name>
+    </exclude>
+  </multilingualFields>
+
+
+  <!-- View configuration -->
+  <views>
+    <view name="default">
+      <tab id="default" default="true" mode="flat">
+        <section name="guf:GUF_FeedbackItem">
+          <field xpath="/guf:GUF_FeedbackItem/guf:itemIdentifier/mcc:MD_Identifier/mcc:code" or="code"
+                 in="mcc:MD_Identifier"/>
+
+
+          <field xpath="/guf:GUF_FeedbackItem/guf:citation" or="citation"
+                 in="guf:GUF_FeedbackItem"/>
+
+          <field xpath="/guf:GUF_FeedbackItem/guf:abstract" or="abstract"
+                 in="/guf:GUF_FeedbackItem"/>
+
+          <field xpath="/guf:GUF_FeedbackItem/guf:userComment" or="userComment"
+                 in="/guf:GUF_FeedbackItem"/>
+
+          <field xpath="/guf:GUF_FeedbackItem/guf:descriptiveKeywords" or="descriptiveKeywords"
+                 in="/guf:GUF_FeedbackItem"/>
+
+          <field xpath="/guf:GUF_FeedbackItem/guf:tag" or="tag"
+                 in="/guf:GUF_FeedbackItem"/>
+
+          <field xpath="/guf:GUF_FeedbackItem/guf:target" or="target"
+                 in="/guf:GUF_FeedbackItem"/>
+
+          <field xpath="/guf:GUF_FeedbackItem/guf:externalFeedback" or="externalFeedback"
+                 in="/guf:GUF_FeedbackItem"/>
+
+          <field xpath="/guf:GUF_FeedbackItem/guf:contactRole" or="contactRole"
+                   in="/guf:GUF_FeedbackItem"/>
+
+          <field xpath="/guf:GUF_FeedbackItem/guf:rating" or="rating"
+                 in="/guf:GUF_FeedbackItem"/>
+
+          <field xpath="/guf:GUF_FeedbackItem/guf:locale" or="locale"
+                 in="/guf:GUF_FeedbackItem"/>
+
+          <field xpath="/guf:GUF_FeedbackItem/guf:contact" or="contact" in="/guf:GUF_FeedbackItem"/>
+
+          <field xpath="/guf:GUF_FeedbackItem/guf:dateInfo"  or="dateInfo"
+                 in="/guf:GUF_FeedbackItem"/>
+        </section>
+      </tab>
+
+      <!-- Elements that should not use the "flat" mode -->
+      <flatModeExceptions>
+        <for name="guf:descriptiveKeywords"/>
+        <for name="guf:contact"/>
+        <for name="cit:party"/>
+        <for name="cit:CI_Individual"/>
+        <for name="cit:CI_Organisation"/>
+      </flatModeExceptions>
+    </view>
+
+    <view name="advanced">
+      <tab id="metadata">
+        <section name="guf:GUF_FeedbackItem" xpath="/guf:GUF_FeedbackItem" />
+      </tab>
+    </view>
+    <view name="xml">
+      <tab id="xml" default="true"/>
+    </view>
+  </views>
+</editor>

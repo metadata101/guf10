@@ -1,0 +1,751 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<labels
+        xmlns:guf="http://www.opengis.net/guf/1.0/core"
+        xmlns:cit="http://standards.iso.org/iso/19115/-3/cit/1.0"
+        xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0"
+        xmlns:gex="http://standards.iso.org/iso/19115/-3/gex/1.0"
+        xmlns:lan="http://standards.iso.org/iso/19115/-3/lan/1.0"
+        xmlns:mcc="http://standards.iso.org/iso/19115/-3/mcc/1.0"
+        xmlns:mdq="http://standards.iso.org/iso/19157/-2/mdq/1.0"
+        xmlns:mri="http://standards.iso.org/iso/19115/-3/mri/1.0"
+        xmlns:mrl="http://standards.iso.org/iso/19115/-3/mrl/1.0"
+        xmlns:mdb="http://standards.iso.org/iso/19115/-3/mdb/1.0"
+        xmlns:dqc="http://standards.iso.org/iso/19157/-2/dqc/1.0"
+        xmlns:qcm="http://www.opengis.net/guf/1.0/common"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        xsi:noNamespaceSchemaLocation="../../../../../../../schema-labels.xsd">
+
+  <!-- GUF elements -->
+  <element name="guf:abstract">
+    <label>Abstract</label>
+    <description>Abstract</description>
+    <condition></condition>
+  </element>
+  <element name="guf:additionalLineageSteps">
+    <label>Additional lineage steps</label>
+    <description>Additional lineage steps</description>
+    <condition></condition>
+  </element>
+  <element name="guf:additionalQuality">
+    <label>Additional quality</label>
+    <description>Additional quality</description>
+    <condition></condition>
+  </element>
+  <element name="guf:applicationDomain">
+    <label>Application domain</label>
+    <description>Application domain</description>
+    <condition></condition>
+  </element>
+  <element name="guf:child">
+    <label>Child</label>
+    <description>Child</description>
+    <condition></condition>
+  </element>
+  <element name="guf:citation">
+    <label>Citation</label>
+    <description>Citation</description>
+    <condition></condition>
+  </element>
+  <element name="guf:comment">
+    <label>Comment</label>
+    <description>Comment</description>
+    <condition></condition>
+  </element>
+  <element name="guf:contact">
+    <label>Contact</label>
+    <description>Contact</description>
+    <condition></condition>
+  </element>
+  <element name="guf:contactRole">
+    <label>Contact Role</label>
+    <description>Contact Role</description>
+    <condition></condition>
+  </element>
+  <element name="guf:dateInfo" id="20.0">
+    <label>Date info</label>
+    <description iso="true">Date(s) associated with the metadata. NOTE Creation”
+      date must be provided, others can also be provided
+    </description>
+    <condition>mandatory</condition>
+  </element>
+  <element name="guf:descriptiveKeywords" id="33.0">
+    <label>Descriptive keywords</label>
+    <description>Provides category keywords, their type, and reference source
+    </description>
+  </element>
+  <element name="guf:discoveredIssue" id="33.0">
+    <label>Discovered issue</label>
+    <description>Discovered issue
+    </description>
+  </element>
+  <element name="guf:eventType">
+    <label>Event type</label>
+    <description>Event type</description>
+    <condition></condition>
+  </element>
+  <element name="guf:expertiseLevel">
+    <label>Expertise level</label>
+    <description>Expertise level</description>
+    <condition></condition>
+  </element>
+  <element name="guf:externalFeedback" id="20.0">
+    <label>External feedback</label>
+    <description>External feedback</description>
+    <condition></condition>
+  </element>
+  <element name="guf:externalUserID">
+    <label>External user identifier</label>
+    <description>External user identifier</description>
+    <condition></condition>
+  </element>
+  <element name="guf:extent">
+    <label>Extent</label>
+    <description>Extent</description>
+    <condition></condition>
+  </element>
+  <element name="guf:GUF_FeedbackItem">
+    <label>User Feedback</label>
+    <description>User Feedback</description>
+    <condition></condition>
+  </element>
+  <element name="guf:GUF_FeedbackTarget">
+    <label>Target</label>
+    <description>Target</description>
+    <condition></condition>
+  </element>
+  <element name="guf:GUF_Rating">
+    <label>Rating</label>
+    <description>Rating</description>
+    <condition></condition>
+  </element>
+  <element name="guf:GUF_SignificantEvent">
+    <label>Significant event</label>
+    <description>Significant event</description>
+    <condition></condition>
+  </element>
+  <element name="guf:GUF_UsageReport">
+    <label>Usage report</label>
+    <description>Usage report</description>
+    <condition></condition>
+  </element>
+  <element name="guf:GUF_UserComment">
+    <label>User comment</label>
+    <description>User comment</description>
+    <condition></condition>
+  </element>
+  <element name="guf:GUF_UserInformation">
+    <label>User information</label>
+    <description>User information</description>
+    <condition></condition>
+  </element>
+  <element name="guf:itemIdentifier">
+    <label>File identifier</label>
+    <description>File identifier</description>
+    <condition>mandatory</condition>
+  </element>
+  <element name="guf:itemIsReplyTo">
+    <label>Item is reply to</label>
+    <description>Item is reply to</description>
+    <condition></condition>
+  </element>
+  <element name="guf:locale" id="185.0">
+    <label>Locale</label>
+    <description iso="true">Language(s) and character set(s) used within the
+      catalogue
+    </description>
+    <condition></condition>
+  </element>
+  <element name="guf:metadataIdentifier">
+    <label>Metadata identifier</label>
+    <description>User details</description>
+    <condition></condition>
+  </element>
+  <element name="guf:motivation">
+    <label>Motivation</label>
+    <description>Motivation</description>
+    <condition></condition>
+  </element>
+  <element name="guf:parent">
+    <label>Parent</label>
+    <description>Parent</description>
+    <condition></condition>
+  </element>
+  <element name="guf:purpose">
+    <label>Purpose</label>
+    <description>Purpose</description>
+    <condition></condition>
+  </element>
+  <element name="guf:rating" id="20.0">
+    <label>Rating</label>
+    <description>Rating</description>
+    <condition></condition>
+  </element>
+  <element name="guf:reportAspect" id="20.0">
+    <label>Report aspect</label>
+    <description>Report aspect</description>
+    <condition></condition>
+  </element>
+  <element name="guf:resourceRef">
+    <label>Resource reference</label>
+    <description>Resource reference</description>
+    <condition></condition>
+  </element>
+  <element name="guf:role">
+    <label>Role</label>
+    <description>Role</description>
+    <condition></condition>
+  </element>
+  <element name="guf:scope">
+    <label>Scope</label>
+    <description>Scope</description>
+    <condition></condition>
+  </element>
+  <element name="guf:significantEvent">
+    <label>Significant event</label>
+    <description>Significant event</description>
+    <condition></condition>
+  </element>
+  <element name="guf:tag">
+    <label>Tag</label>
+    <description>Tag</description>
+    <condition></condition>
+  </element>
+  <element name="guf:target">
+    <label>Target</label>
+    <description>Target</description>
+    <condition></condition>
+  </element>
+  <element name="guf:usage">
+    <label>Usage</label>
+    <description>Usage</description>
+    <condition></condition>
+  </element>
+  <element name="guf:usageDescription">
+    <label>Usage description</label>
+    <description>Usage description</description>
+    <condition></condition>
+  </element>
+  <element name="guf:userComment">
+    <label>User comment</label>
+    <description>User comment</description>
+    <condition></condition>
+  </element>
+  <element name="guf:userDetails">
+    <label>User details</label>
+    <description>User details</description>
+    <condition></condition>
+  </element>
+  <element name="guf:userRole">
+    <label>User role</label>
+    <description>User role</description>
+    <condition></condition>
+  </element>
+
+
+
+  <!-- MCC elements -->
+  <element name="mcc:authority" id="432.0">
+    <label>Authority</label>
+    <description>Person or party responsible for maintenance of the namespace
+    </description>
+  </element>
+  <element name="mcc:code" id="433.0" context="/guf:GUF_FeedbackItem/guf:itemIdentifier/mcc:MD_Identifier/mcc:code">
+    <label>File identifier</label>
+    <description>File identifier</description>
+    <condition>mandatory</condition>
+  </element>
+  <element name="mcc:code" id="433.0">
+    <label>Code</label>
+    <description>Alphanumeric value identifying an instance in the namespace
+    </description>
+    <description iso="true">Alphanumeric value identifying an instance in the
+      namespace. NOTE Avoid characters that are not legal in URLs. EXAMPLE
+      EPSG::4326
+    </description>
+    <condition>mandatory</condition>
+  </element>
+  <element name="mcc:codeSpace" id="434.0">
+    <label>Codespace</label>
+    <description>Name or identifier of the person or organization responsible
+      for
+      namespace
+    </description>
+    <description iso="true">Identifier or namespace in which the code is valid
+    </description>
+    <helper>
+      <option value="EPSG">EPSG</option>
+    </helper>
+  </element>
+  <element name="mcc:description" id="436.0">
+    <label>Description</label>
+    <description iso="true">natural language description of the meaning of the
+      code value. EXAMPLE For codeSpace = EPSG, code= 4326, description =
+      WGS-84.
+    </description>
+  </element>
+  <element name="mcc:extent" id="140.0" context="mcc:MD_Scope">
+    <label>Extent</label>
+    <description>Information about the horizontal, vertical and temporal extent
+      of the data specified by the scope
+    </description>
+  </element>
+  <element name="mcc:level" id="139.0">
+    <label>Hierarchy level</label>
+    <description>Hierarchical level of the data specified by the scope
+    </description>
+    <condition>mandatory</condition>
+  </element>
+  <element name="mcc:levelDescription" id="141.0">
+    <label>Level description</label>
+    <description>Detailed description about the level of the data specified by
+      the
+      scope
+    </description>
+    <_condition>Conditional / level not equal 'dataset' or 'series'?
+    </_condition>
+  </element>
+  <element name="mcc:MD_Identifier" id="431.0">
+    <label>Identifier</label>
+    <description>Value uniquely identifying an object within a namespace
+    </description>
+  </element>
+  <element name="mcc:MD_Scope" id="420.0">
+    <label>Scope</label>
+    <description iso="true">Class of information about the target resource and
+      physical extent for which information is reported
+    </description>
+    <help/>
+    <condition/>
+  </element>
+  <element name="mcc:version" id="208.2" context="mcc:MD_Identifier">
+    <label>Version</label>
+    <description>version identifier for the namespace</description>
+  </element>
+
+
+
+
+  <!-- CIT elements -->
+  <element name="cit:address" id="389.0">
+    <label>Address</label>
+    <description>Physical and email address at which the organization or
+      individual may be
+      contacted
+    </description>
+  </element>
+  <element name="cit:administrativeArea" id="391.0">
+    <label>Administrative area</label>
+    <description>State, province of the location</description>
+  </element>
+  <element name="cit:alternateTitle" id="363.0">
+    <label>Alternate title</label>
+    <description>Short name or other language name by which the cited
+      information is known.
+      Example: "DCW" as an alternative title for "Digital Chart of the World
+    </description>
+  </element>
+  <element name="cit:CI_Address" id="380.0">
+    <label>Address</label>
+    <description>Location of the responsible individual or organization
+    </description>
+    <_condition>Use obligation/condition from referencing object</_condition>
+  </element>
+  <element name="cit:CI_Citation" id="361.0">
+    <label>Citation</label>
+    <description>Standardised resource reference</description>
+    <_condition>Use obligation/condition from referencing object</_condition>
+  </element>
+  <element name="cit:CI_Contact" id="387.0">
+    <label>Contact</label>
+    <description>Information required to enable contact with the responsible
+      person and/or
+      organization
+    </description>
+    <_condition>Use obligation/condition from referencing object</_condition>
+  </element>
+  <element name="cit:CI_Date" id="402.0">
+    <label>Date</label>
+    <description>Reference date and event used to describe it (YYYY-MM-DD)
+    </description>
+    <_condition>Use obligation/condition from referencing object</_condition>
+  </element>
+  <element name="cit:CI_Individual" id="383.0">
+    <label>Individual</label>
+    <description iso="true">Class of information about the party if the party is
+      an individual
+    </description>
+  </element>
+  <element name="cit:CI_Organisation" id="385.0">
+    <label>Organisation</label>
+    <description iso="true">Class of information about the party if the party is
+      an organization
+    </description>
+  </element>
+  <element name="cit:CI_Responsibility" id="376.0">
+    <label>Responsibility</label>
+    <description iso="true">Class of information about the party and their
+      role
+    </description>
+  </element>
+  <element name="cit:CI_Series" id="413.0">
+    <label>Series</label>
+    <description iso="true">Class of information about the series, or aggregate
+      resource, to which a resource belongs
+    </description>
+    <help/>
+    <condition/>
+  </element>
+  <element name="cit:citedResponsibleParty" id="367.0">
+    <label>Cited responsible party</label>
+    <description>Name and position information for an individual or organization
+      that is
+      responsible for the resource
+    </description>
+  </element>
+  <element name="cit:city" id="390.0">
+    <label>City</label>
+    <description>City of the location</description>
+  </element>
+  <element name="cit:contactInfo" id="378.0">
+    <description>Address of the responsible party</description>
+    <label>Contact Information</label>
+  </element>
+  <element name="cit:contactInstructions" id="392.0">
+    <label>Contact instructions</label>
+    <description>Supplemental instructions on how or when to contact the
+      individual or
+      organization
+    </description>
+  </element>
+  <element name="cit:contactType" id="401.0">
+    <label>Contact type</label>
+    <description iso="true">Type of the contact</description>
+    <help/>
+    <condition/>
+  </element>
+  <element name="cit:country" id="393.0">
+    <label>Country</label>
+    <description>Country of the physical address</description>
+  </element>
+  <element name="cit:date" id="393.0">
+    <label>Date</label>
+    <description>Formatted as 2007-09-12 (YYYY-MM-DD)</description>
+    <help>reference date and event used to describe it</help>
+    <_condition>Use obligation/condition from referencing object</_condition>
+  </element>
+  <element name="cit:dateType" id="404.0">
+    <label>Date type</label>
+    <description>Event used for reference date</description>
+    <condition>mandatory</condition>
+  </element>
+  <element name="cit:deliveryPoint" id="389.0">
+    <label>Delivery point</label>
+    <description>Address line for the location (as described in ISO 11180, annex
+      A)
+    </description>
+    <description iso="true">Address line for the location. Example Street number
+      and name, Suite number, etc.
+    </description>
+  </element>
+  <element name="cit:edition" id="365.0">
+    <label>Edition</label>
+    <description>Version of the cited resource</description>
+  </element>
+  <element name="cit:editionDate" id="366.0">
+    <label>Edition date</label>
+    <description>Date of the edition (YYYY-MM-DD)</description>
+  </element>
+  <element name="cit:electronicMailAddress" id="394.0">
+    <label>Electronic mail address</label>
+    <description>Address of the electronic mailbox of the responsible
+      organization or
+      individual
+    </description>
+  </element>
+  <element name="cit:extent" id="378.0" context="cit:CI_Responsibility">
+    <label>Extent</label>
+    <description iso="true">Spatial or temporal extent of the role</description>
+  </element>
+  <element name="cit:graphic" id="375.0" context="cit:CI_Citation">
+    <label>Graphic</label>
+    <description>Citation graphic or logo for the cited resource</description>
+    <condition>optional</condition>
+  </element>
+  <element name="cit:hoursOfService" id="391.0">
+    <label>Hours of service</label>
+    <description>Time period (including time zone) when individuals can contact
+      the organization
+      or individual
+    </description>
+  </element>
+  <element name="cit:identifier" id="573.0" context="cit:CI_Citation">
+    <label>Citation identifier</label>
+    <description>Identifier of the citation</description>
+  </element>
+  <element name="cit:individual" id="387.0">
+    <label>Individual</label>
+    <description>An individual in the named organization</description>
+    <_condition></_condition>
+  </element>
+  <element name="cit:ISBN" id="372.0">
+    <label>ISBN</label>
+    <description>International Standard Book Number</description>
+  </element>
+  <element name="cit:ISSN" id="373.0">
+    <label>ISSN</label>
+    <description>International Standard Serial Number</description>
+  </element>
+  <element name="cit:issueIdentification" id="405.0">
+    <label>Issue identification</label>
+    <description>Information identifying the issue of the series</description>
+  </element>
+  <element name="cit:logo" id="386.0">
+    <label>Logo</label>
+    <description iso="true">Graphic identifying the organization</description>
+    <help/>
+    <condition/>
+  </element>
+  <element name="cit:name">
+    <label>Name</label>
+    <description/>
+  </element>
+  <element name="cit:number" id="418.0">
+    <label>Number</label>
+    <description iso="true">Telephone number by which individuals can contact
+      responsible organisation or individual
+    </description>
+    <help/>
+    <condition/>
+  </element>
+  <element name="cit:onlineResource" id="390.0">
+    <help>Define URL to access the website</help>
+    <label>Website</label>
+    <description>On-line information that can be used to contact the individual
+      or
+      organisation
+    </description>
+  </element>
+  <element name="cit:otherCitationDetails" id="371.0">
+    <label>Other citation details</label>
+    <description>Other information required to complete the citation that is not
+      recorded
+      elsewhere
+    </description>
+  </element>
+  <element name="cit:page" id="416.0">
+    <label>Page</label>
+    <description>Details on which pages of the publication the article was
+      published
+    </description>
+  </element>
+  <element name="cit:party" id="379.0" context="cit:CI_Responsibility">
+    <label>Party</label>
+    <description iso="true">Information about the party</description>
+  </element>
+  <element name="cit:phone" id="396.0">
+    <label>Telephone</label>
+    <description iso="true">Telephone numbers at which the organisation or
+      individual may be contacted
+    </description>
+    <help/>
+    <condition/>
+  </element>
+  <element name="cit:positionName" id="377.0">
+    <label>Position name</label>
+    <description>Role or position of the responsible person</description>
+    <condition>conditional</condition>
+  </element>
+  <element name="cit:postalCode" id="392.0">
+    <label>Postal code</label>
+    <description>ZIP or other postal code</description>
+  </element>
+  <element name="cit:presentationForm" id="369.0">
+    <label>Presentation form</label>
+    <description iso="true">Mode in which the resource is represented
+    </description>
+    <help></help>
+    <condition/>
+  </element>
+  <element name="cit:role" id="377.0" context="cit:CI_Responsibility">
+    <label>Role</label>
+    <description>Function performed by the responsible party</description>
+    <condition>mandatory</condition>
+  </element>
+  <element name="cit:series" id="370.0">
+    <label>Series</label>
+    <description iso="true">Information about the series, or aggregate resource,
+      of which the resource is a part
+    </description>
+    <help/>
+    <condition/>
+  </element>
+  <element name="cit:title" id="360.0">
+    <label>Title</label>
+    <description>Name by which the cited resource is known</description>
+    <condition>mandatory</condition>
+  </element>
+
+
+  <!-- MRI elements -->
+  <element name="mri:specificUsage" id="63.0">
+    <label>Specific usage</label>
+    <description>Brief description of the resource and/or resource series
+      usage
+    </description>
+    <condition>mandatory</condition>
+  </element>
+  <element name="mri:thesaurusName" id="55.0">
+    <label>Thesaurus name</label>
+    <description>Name of the formally registered thesaurus or a similar
+      authoritative source of
+      keywords
+    </description>
+  </element>
+  <element name="mri:keyword" id="53.0">
+    <label>Keyword</label>
+    <description>Commonly used word(s) or formalised word(s) or phrase(s) used
+      to describe the
+      subject
+    </description>
+  </element>
+  <element name="mri:type" id="54.0">
+    <label>Type</label>
+    <description>Subject matter used to group similar keywords</description>
+  </element>
+  <element name="mri:keywordClass" id="72.0">
+    <label>Keyword class</label>
+    <description iso="true">association of a MD_Keywords instance with a
+      MD_KeywordClass to provide user-defined categorization of groups of
+      keywords that extend or are orthogonal to the standardized
+      KeywordTypeCodes and are associated with an ontology that allows
+      additional semantic query processing NOTE The thesaurus citation specifies
+      a collection of instances from some ontology, but is not an ontology. It
+      might be a list of places that include rivers, mountains, counties and
+      cities. There might be a Laconte county, the city of Laconte, the Laconte
+      River, and Mt. Laconte; when searching it is useful for the user to be
+      able to restrict the search to only rivers.
+    </description>
+    <_condition>optional</_condition>
+  </element>
+  <element name="mri:organisationName" id="376.0">
+    <label>Organisation name</label>
+    <description>Name of the responsible organization</description>
+    <condition>conditional</condition>
+  </element>
+
+
+  <!-- LAN elements -->
+  <element name="lan:PT_Locale">
+    <label>Locale</label>
+    <description>Locale</description>
+  </element>
+  <element name="lan:PT_LocaleContainer">
+    <label>Container of localised character strings</label>
+    <description>Container of localised character strings. NOTE It provides a
+      means to isolate the localised strings related to a given locale.
+    </description>
+  </element>
+
+
+  <!-- GEX elements -->
+  <element name="gex:description" id="335.0" context="gex:EX_Extent">
+    <label>Description</label>
+    <description>Spatial and temporal extent for the referring object
+    </description>
+    <_condition>Conditional / geographicElement and temporalElement and
+      verticalElement not
+      documented?
+    </_condition>
+  </element>
+  <element name="gex:EX_Extent" id="334.0">
+    <label>Extent</label>
+    <description>Information about spatial, vertical, and temporal extent
+    </description>
+  </element>
+  <element name="gex:EX_VerticalExtent" id="354.0">
+    <label>Vertical extent</label>
+    <description>Vertical domain of dataset</description>
+  </element>
+  <element name="gex:EX_TemporalExtent" id="350.0">
+    <label>Temporal extent</label>
+    <description>Time period covered by the content of the dataset</description>
+  </element>
+  <element name="gex:extent">
+    <label>Extent</label>
+    <description>Geographic/Temporal Extent of Service</description>
+  </element>
+  <element name="gex:geographicElement" id="336.0">
+    <label>Geographic element</label>
+    <description>Provides geographic component of the extent of the referring
+      object
+    </description>
+    <_condition>Conditional / description and temporalElement and
+      verticalElement not
+      documented?
+    </_condition>
+  </element>
+  <element name="gex:maximumValue" id="356.0">
+    <label>Maximum value</label>
+    <description>Highest vertical extent contained in the dataset</description>
+    <condition>mandatory</condition>
+  </element>
+  <element name="gex:minimumValue" id="355.0">
+    <label>Minimum value</label>
+    <description>Lowest vertical extent contained in the dataset</description>
+    <condition>mandatory</condition>
+  </element>
+  <element name="gex:spatialExtent" id="353.0">
+    <label>Spatial extent</label>
+    <description>Spatial extent component of composite spatial and temporal
+      extent
+    </description>
+    <condition>mandatory</condition>
+  </element>
+  <element name="gex:temporalElement" id="337.0">
+    <label>Temporal element</label>
+    <description>Provides temporal component of the extent of the referring
+      object
+    </description>
+    <condition>conditional</condition>
+  </element>
+  <element name="gex:verticalCRS">
+    <label>Vertical CRS</label>
+    <description>Provides information about the origin from which the maximum
+      and minimum elevation values are measured
+    </description>
+  </element>
+  <element name="gex:verticalCRSId">
+    <label>Vertical CRS identifier</label>
+    <description>Provides information about the origin from which the maximum
+      and minimum elevation values are measured
+    </description>
+  </element>
+  <element name="gex:verticalElement" id="338.0">
+    <label>Vertical element</label>
+    <description>Provides vertical component of the extent of the referring
+      object
+    </description>
+    <condition>conditional</condition>
+  </element>
+  <element name="gex:verticalExtent" id="354.0">
+    <label>Vertical extent</label>
+    <description iso="true">Vertical extent component</description>
+  </element>
+
+
+  <!-- Others -->
+  <element name="xlink:type">
+    <label>Type of link</label>
+    <description></description>
+  </element>
+
+  <element name="gco:CharacterString">
+    <label>Text</label>
+    <description/>
+  </element>
+  <element name="gco:nilReason">
+    <label>Nil reason</label>
+    <description/>
+  </element>
+</labels>
