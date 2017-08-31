@@ -168,13 +168,14 @@ for the schema:
 ### Adding the conversion to the import record page
 
 
-## More work required
+## Potential further development
 
 ### Formatter
+- html formatter should include schema.org/Review annotations
+- rdf formatter should include DUV annotations https://www.w3.org/TR/vocab-duv/
+- GeoNetwork UI should be able to manage GFU metadata with dedicated feedback widgets
 
-
-### GML support
-
+### Documentation / Translation
 
 ## Community
 
@@ -182,7 +183,10 @@ Comments and questions to geonetwork-developers or geonetwork-users mailing list
 
 
 ## Contributors
-
-
 * Paul van Genuchten (GeoCat)
 * Jose Garcia (GeoCat)
+
+## License
+
+This project is licensed under EUPL 1.2 license https://joinup.ec.europa.eu/sites/default/files/eupl_v1.2_en.pdf
+Project has recieved funding from EU as part of ELISE action
